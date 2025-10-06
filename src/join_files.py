@@ -5,7 +5,7 @@ import logging
 def juntar_arquivos_excel(pasta_origem: Path):
     logger = logging.getLogger(__name__)
 
-    nome_arquivo_saida = "PEVS_RO_SILVICULTURA_AREA_FINAL.xlsx"
+    nome_arquivo_saida = "PEVS_RO_SILVICULTURA_PRODUTO_FINAL.xlsx"
     caminho_completo_saida = pasta_origem / nome_arquivo_saida
     
     if caminho_completo_saida.exists():
@@ -17,7 +17,7 @@ def juntar_arquivos_excel(pasta_origem: Path):
     lista_de_dataframes = []
 
     arquivos_excel = sorted([
-        arquivo for arquivo in pasta_origem.glob("PEVS_RO_SILVICULTURA_AREA_*.xlsx") 
+        arquivo for arquivo in pasta_origem.glob("PEVS_RO_SILVICULTURA_PRODUTO_*.xlsx") 
         if arquivo.name != nome_arquivo_saida
     ])
 

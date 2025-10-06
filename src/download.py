@@ -16,7 +16,7 @@ def main():
     data_dir.mkdir(parents=True, exist_ok=True)
     
     logger.info(f"Pasta de dados criada ou já existente em: {data_dir}")
-    logger.info("Iniciando o processo de download de arquivos anuais da Produção da Extração Vegetal e da Silvicultura (PEVS) - Quantidade produzida e valor da produção na extração vegetal, por tipo de produto extrativo")
+    logger.info("Iniciando o processo de download de arquivos anuais da Produção da Extração Vegetal e da Silvicultura (PEVS) - Quantidade produzida e valor da produção na silvicultura, por tipo de produto da silvicultura")
     
     # Códigos de municípios do estado de Rondônia (RO)
     municipality_codes_ro = [
@@ -53,7 +53,7 @@ def main():
             df.columns = df.iloc[0]
             df = df.iloc[1:, :]
 
-            file_name = f"PEVS_RO_SILVICULTURA_AREA_{year}.xlsx"
+            file_name = f"PEVS_RO_SILVICULTURA_PRODUTO_{year}.xlsx"
             full_path = data_dir / file_name
             
             df.to_excel(full_path, index=False)

@@ -18,7 +18,7 @@ def main():
 
     DIRETORIO_SCRIPT = Path(__file__).parent
     PASTA_ARQUIVOS = DIRETORIO_SCRIPT.parent / "files"
-    TABELA_DESTINO = "dados_pevs_silvicultura_area"
+    TABELA_DESTINO = "dados_pevs_silvicultura_produto"
 
     logger.info("Iniciando o processo de ETL (Extrair, Transformar, Carregar)...")
 
@@ -37,7 +37,7 @@ def main():
         logger.error(f"Erro ao conectar ao banco de dados: {e}")
         exit()
 
-    arquivo_consolidado = PASTA_ARQUIVOS / "PEVS_RO_SILVICULTURA_AREA_FINAL.xlsx"
+    arquivo_consolidado = PASTA_ARQUIVOS / "PEVS_RO_SILVICULTURA_PRODUTO_FINAL.xlsx"
 
     if not arquivo_consolidado.exists():
         logger.info(f"Erro: O arquivo '{arquivo_consolidado.name}' não foi encontrado na pasta '{PASTA_ARQUIVOS}'.")

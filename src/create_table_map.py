@@ -14,8 +14,8 @@ def main():
     user = os.getenv("DB_USER")
     password = os.getenv("DB_PASSWORD")
 
-    TABELA_MAPA = "mapa_pevs_silvicultura_area"
-    TABELA_DADOS = "dados_pevs_silvicultura_area"
+    TABELA_MAPA = "mapa_pevs_silvicultura_produto"
+    TABELA_DADOS = "dados_pevs_silvicultura_produto"
     TABELA_MUNICIPIOS = "ro_municipios_2022"
 
     try:

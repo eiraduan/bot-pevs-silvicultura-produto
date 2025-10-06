@@ -12,7 +12,7 @@ def main():
     user = os.getenv("DB_USER")
     password = os.getenv("DB_PASSWORD")
 
-    TABELA = "dados_pevs_silvicultura_area"
+    TABELA = "dados_pevs_silvicultura_produto"
 
     try:
         print("Tentando estabelecer a conexão com o banco de dados...")

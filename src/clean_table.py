@@ -14,8 +14,8 @@ def main():
     user = os.getenv("DB_USER")
     password = os.getenv("DB_PASSWORD")
 
-    TABELA_DESTINO = "dados_pevs_silvicultura_area"
-    MAPA_DESTINO = "mapa_pevs_silvicultura_area"
+    TABELA_DESTINO = "dados_pevs_silvicultura_produto"
+    MAPA_DESTINO = "mapa_pevs_silvicultura_produto"
 
     try:
         logger.info("Tentando estabelecer a conexão com o banco de dados...")
