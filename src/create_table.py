@@ -43,8 +43,8 @@ def main():
             ano INTEGER,
             variavel_codigo INTEGER,
             variavel VARCHAR(255),
-            tipo_produto_extrativo_codigo INTEGER,
-            tipo_produto_extrativo VARCHAR(255)
+            tipo_produto_silvicultura_codigo INTEGER,
+            tipo_produto_silvicultura VARCHAR(255)
         );
         """
         cursor.execute(create_table_query)
